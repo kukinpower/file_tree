@@ -20,5 +20,4 @@ public class FileTree {
     fileNode.printFiles(stringBuilder, "", true);
     return Optional.of(stringBuilder.toString());
   }
-
 }
