@@ -17,14 +17,14 @@ public class TestFileTree {
   public void testNullPath() {
     FileTree fileTree = new FileTree();
     Optional<String> tree = fileTree.tree(null);
-    assertTrue(tree.isEmpty(),"null path failure");
+    assertTrue(tree.isEmpty(), "null path failure");
   }
 
   @Test
   public void testBadPath() {
     FileTree fileTree = new FileTree();
     Optional<String> tree = fileTree.tree(Path.of("the path does not exist"));
-    assertTrue(tree.isEmpty(),"not existing path case failure");
+    assertTrue(tree.isEmpty(), "not existing path case failure");
   }
 
   @Test
@@ -44,7 +44,8 @@ public class TestFileTree {
     Optional<String> tree = fileTree.tree(Path.of("./src/test/resources/" + path));
     assertTrue(tree.isPresent());
 
-    String expected = Files.lines(Path.of("./src/test/resources/" + path + "_result.txt")).collect(Collectors.joining("\n"));
+    String expected = Files.lines(Path.of("./src/test/resources/" + path + "_result.txt"))
+        .collect(Collectors.joining("\n"));
     assertEquals(expected.strip(), tree.get().strip());
     return true;
   }

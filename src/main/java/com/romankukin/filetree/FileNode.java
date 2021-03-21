@@ -3,9 +3,9 @@ package com.romankukin.filetree;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class FileNode {
+
   File root;
   FileNode[] files;
   FileNode parent;
@@ -35,17 +35,14 @@ public class FileNode {
     File[] listFiles = file.listFiles();
 
     if (listFiles != null) {
-      Arrays.sort(listFiles, new Comparator<File>() {
-        @Override
-        public int compare(File o1, File o2) {
-          if (o1.isDirectory() && !o2.isDirectory()) {
-            return -1;
-          }
-          if (!o1.isDirectory() && o2.isDirectory()) {
-            return 1;
-          }
-          return o1.getName().compareToIgnoreCase(o2.getName());
+      Arrays.sort(listFiles, (o1, o2) -> {
+        if (o1.isDirectory() && !o2.isDirectory()) {
+          return -1;
         }
+        if (!o1.isDirectory() && o2.isDirectory()) {
+          return 1;
+        }
+        return o1.getName().compareToIgnoreCase(o2.getName());
       });
       files = new FileNode[listFiles.length];
       for (int i = 0; i < files.length; i++) {
