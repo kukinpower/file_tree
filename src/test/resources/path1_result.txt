@@ -1,0 +1,7 @@
+path1 257 bytes
+└─ project 257 bytes
+   ├─ texts 172 bytes
+   │  ├─ a.txt 115 bytes
+   │  └─ b.txt 57 bytes
+   ├─ another_text.txt 57 bytes
+   └─ text.txt 28 bytes

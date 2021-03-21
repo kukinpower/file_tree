@@ -1,0 +1,15 @@
+path2 344 bytes
+├─ first 172 bytes
+│  ├─ a 0 bytes
+│  ├─ aa 0 bytes
+│  ├─ B 0 bytes
+│  ├─ BB 0 bytes
+│  ├─ a.txt 115 bytes
+│  ├─ AA.txt 0 bytes
+│  ├─ b.txt 57 bytes
+│  └─ BB.txt 0 bytes
+└─ last 172 bytes
+   ├─ a 0 bytes
+   ├─ z 0 bytes
+   ├─ a.txt 115 bytes
+   └─ b.txt 57 bytes
