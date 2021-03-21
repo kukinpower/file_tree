@@ -1,4 +1,4 @@
-# Pretty file tree hierarchy 
+# 🌳 Pretty file tree hierarchy 
 
 Simply prints file tree in command line by given path
 
